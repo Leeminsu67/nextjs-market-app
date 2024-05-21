@@ -12,7 +12,7 @@ interface NavbarProps {
 function Navbar({ currentUser }: NavbarProps) {
   const [menu, setMenu] = useState(false);
 
-  console.log("currentUser", currentUser);
+  // console.log("currentUser", currentUser);
 
   const handleMent = () => {
     setMenu(!menu);
