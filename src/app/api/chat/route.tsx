@@ -66,8 +66,8 @@ export async function POST(request: Request) {
 
   // 이미 둘이 대화를 한 conversation이 있다면 메시지만 생성하기
   if (conversation) {
-    console.log("둘이 대화를 한 상태");
-    console.log(body);
+    // console.log("둘이 대화를 한 상태");
+    // console.log(body);
     try {
       const message = await prisma.message.create({
         data: {
@@ -78,7 +78,7 @@ export async function POST(request: Request) {
           conversationId: conversation.id,
         },
       });
-      console.log(message);
+      // console.log(message);
 
       return NextResponse.json(message);
     } catch (error: any) {
